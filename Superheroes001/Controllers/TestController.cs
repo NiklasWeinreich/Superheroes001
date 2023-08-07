@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Superheroes001.Entities;
-
-namespace Superheroes001.Controllers
+﻿namespace Superheroes001.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

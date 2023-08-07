@@ -1,7 +1,4 @@
-﻿using NodaTime;
-using System.ComponentModel.DataAnnotations;
-
-namespace Superheroes001.Entities
+﻿namespace Superheroes001.Entities
 {
     public class Hero
     {

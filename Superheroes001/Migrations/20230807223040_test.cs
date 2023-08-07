@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Superheroes001.Migrations
 {
-    public partial class myNameIs : Migration
+    public partial class test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -24,12 +24,32 @@ namespace Superheroes001.Migrations
                 {
                     table.PrimaryKey("PK_Hero", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Superman",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RealName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SuperPower = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    DebutYear = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Superman", x => x.Id);
+                });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Hero");
+
+            migrationBuilder.DropTable(
+                name: "Superman");
         }
     }
 }
